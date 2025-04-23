@@ -1,0 +1,97 @@
+/* Custom styles to enhance Tailwind CSS */
+
+/* Smooth scrolling and better font rendering */
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Chat message animations */
+.chat-message {
+    animation: fade-in 0.3s ease-in-out;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom scrollbar for chat */
+#chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+#chat-messages::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+    background: #c5d1eb;
+    border-radius: 10px;
+}
+
+#chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #91a4ce;
+}
+
+/* Typing indicator animation */
+.typing-indicator {
+    display: inline-flex;
+}
+
+.typing-indicator span {
+    width: 6px;
+    height: 6px;
+    background-color: #93c5fd;
+    border-radius: 50%;
+    margin: 0 2px;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-4px); }
+}
+
+/* Weather icon animations */
+.weather-icon-animate {
+    transition: transform 0.3s ease;
+}
+
+.weather-icon-animate:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .chat-message .max-w-xs {
+        max-width: 80%;
+    }
+}
+
+/* Message highlighting */
+.highlight-message {
+    border-left: 3px solid #3b82f6;
+}
+
+/* Pulse animation for loading states */
+.pulse-loading {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+/* AIzaSyDb-6JscA5JaRGYmRpiCmH8o49SQUlg1-o */
